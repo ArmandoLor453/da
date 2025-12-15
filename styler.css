@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none ;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*.header{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.85)
+    ), url(Logo.png.jpeg );
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}*/
+
+.header {
+  background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('Logo.png.jpeg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Capa de efecto gota de agua */
+.header::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  animation: ripple 6s infinite ease-in-out;
+}
+
+/* Animación de ondulación */
+@keyframes ripple {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.logo{
+    color: #fffdfc;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #fffdfc;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+    color: #000000;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    text-align: center;
+}
+
+/*.header-content h1{
+    font-size: 200px;
+    line-height: 100px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}*/
+
+.header-content h1 {
+    font-size: 200px;
+    line-height: 100px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+    /* Sobresalir sobre el fondo */
+    text-shadow:
+        3px 3px 10px rgba(0,0,0,0.7), /* sombra negra grande para profundidad */
+        1px 1px 3px rgba(255,255,255,0.2); /* sutil resplandor */
+    z-index: 10; /* asegurar que esté sobre el overlay */
+    position: relative;
+}
+
+
+.header-content p{
+    font-size: 16px;
+    color: #c5c5c5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #000000;
+    color: #f9fafc;
+    text-transform: uppercase;
+}
+
+.btn-1:hover{
+    background-color: #414244;
+}
+
+.somos{
+    padding: 20px 0;
+    background-color: #836750;
+    position: relative;
+}
+
+.somos-content{
+    text-align: center;
+}
+
+.somos-content h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #161616;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+
+.txt-p{
+    font-size: 16px;
+    color: #0a0a0a;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+
+.somos-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/*.somos-1{
+    padding: 0 25px;
+}
+
+.somos-1 img{
+    width: 200px;
+}*/
+
+.somos-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*.somos-1 h3{
+    color: #323337;
+    font-size: 20px;
+    margin-bottom: 15px;
+}*/
+
+.somos-1 {
+    border: 2px solid #9f795a;        /* Borde gris claro */
+    border-radius: 10px;           /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    padding: 20px;                 /* Espacio interno */
+    margin: 20px;                  /* Espacio externo entre cuadros */
+    background-color: #eaccb3;        /* Fondo blanco */
+    max-width: 400px;              /* Ancho máximo */
+    text-align: center;            /* Centrar texto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efecto al pasar el mouse */
+}
+
+.somos-1:hover {
+    transform: translateY(-5px);   /* Levanta el cuadro al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Sombra más intensa */
+}
+
+.somos-1 img {
+    width: 150px;                  /* Tamaño de la imagen */
+    height: 150px;                 /* Mantener proporción */
+    object-fit: cover;             /* Ajusta la imagen dentro del recuadro */
+    border-radius: 50%;            /* Imagen circular */
+    margin-bottom: 15px;
+}
+
+.somos-1 h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.somos-1 p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+.services{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+         rgba(0,0,0,0.7)),
+         url(clas.jpeg);
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-attachment: fixed;
+         padding: 150px 0;
+}
+
+/*.services-content{
+    text-align: center;
+}
+
+.services-content h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #f9fafc;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.services-content p{
+    font-size: 16px;
+    color: #c5c5c5;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.services-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.services-1{
+    padding: 0 100px;
+}
+
+.services-1 img{
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.services-1 h3{
+    color: #eaccb3;
+    font-size: 18px;
+}*/
+
+/* Contenedor general */
+.services-content {
+    text-align: center;
+}
+
+/* Título */
+.services-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #f9fafc;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+/* Párrafo */
+.services-content p {
+    font-size: 16px;
+    color: #c5c5c5;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+/* Grupo de tarjetas */
+.services-group {
+    display: flex;
+    flex-wrap: wrap;           /* Permite que se adapten a pantallas pequeñas */
+    justify-content: center;   /* Centra los servicios */
+    gap: 20px;                 /* Espacio entre tarjetas */
+    margin-bottom: 50px;
+}
+
+/* Cada tarjeta */
+.services-1 {
+    padding: 20px;                  /* Espacio interno */
+    width: 200px;                    /* Ancho fijo */
+    background-color: #444444;      /* Fondo oscuro */
+    border: 2px solid #836750;      /* Borde del color de tu h3 */
+    border-radius: 12px;             /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra suave */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover */
+.services-1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Imagen dentro de la tarjeta */
+.services-1 img {
+    width: 80px;          /* mantiene tu tamaño */
+    height: 80px;         /* igual para proporción */
+    object-fit: cover;    /* asegura que no se deforme */
+    border-radius: 50%;   /* Imagen circular */
+    margin-bottom: 15px;
+}
+
+/* Título de cada servicio */
+.services-1 h3 {
+    color: #eaccb3;       /* tu color original */
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* Botón Información */
+.btn-1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn-1:hover {
+    background-color: #919294;
+}
+
+.general{
+    display: flex;
+}
+
+.general-1{
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: #c3c1c1;
+}
+
+.general-2{
+    background-image: url(map.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.general-3{
+    background-image: url(co.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #60636e;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 16px;
+    color: #414247;
+    margin: 25px 0 45px 0;
+}
+
+.blog{
+    padding: 100px;
+    text-align: center;
+}
+
+.blog-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-1{
+    padding: 15px 55px;
+}
+
+.blog-1 img{
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.blog-1 h3{
+    font-size: 25px;
+    color: #323337;
+}
+
+.footer{
+    padding: 100px 0;
+    background-color: #000000;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3{
+    font-size: 18px;
+    color: #f9fafc;
+    margin-bottom: 15px;
+}
+
+.link a{
+    font-size: 16px;
+    color: #c5c5c5;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* ---------------------------
+   Responsive: tablets y móvil
+   --------------------------- */
+
+/* Ajustes generales para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+  .container { padding: 0 20px; }
+
+  /* Header */
+  .header { min-height: 80vh; background-position: center; }
+  .header-content h1 { font-size: 120px; line-height: 1; margin-bottom: 30px; padding: 0 20px; }
+  .header-content p { padding: 0 80px; font-size: 15px; }
+
+  /* Menu */
+  .menu .navbar ul li a { font-size: 16px; padding: 14px; }
+  .menu { padding: 12px 20px; }
+
+  /* Somos */
+  .somos-content h2 { font-size: 40px; line-height: 48px; padding: 0 60px; }
+  .txt-p { padding: 0 60px; }
+  .somos-group { flex-wrap: wrap; justify-content: center; gap: 20px; }
+  .somos-img { max-width: 200px; right: 10px; top: 10px; }
+
+  /* Services */
+  .services { padding: 100px 0; background-attachment: scroll; }
+  .services-content p { padding: 0 60px; }
+  .services-group { gap: 16px; justify-content: center; }
+  .services-1 { width: 220px; padding: 18px; }
+
+  /* General (map / imágenes) */
+  .general { flex-direction: column; }
+  .general-1 { width: 100%; padding: 60px 40px 60px 40px; }
+  .general-2, .general-3 { width: 100%; min-height: 400px; background-size: cover; background-position: center; }
+
+  /* Blog */
+  .blog { padding: 60px 20px; }
+  .blog-content { flex-direction: column; gap: 30px; align-items: center; }
+  .blog-1 img { width: 100%; max-width: 420px; }
+
+  /* Footer */
+  .footer { padding: 60px 20px; }
+  .footer-content { flex-direction: column; gap: 24px; align-items: center; text-align: center; }
+
+  /* Tipos y espaciados */
+  h2 { font-size: 42px; padding: 0 10px; }
+  p { font-size: 15px; }
+}
+
+/* Ajustes para móviles (smartphones) */
+@media (max-width: 768px) {
+  .container { padding: 0 12px; }
+
+  /* Header */
+  .header { min-height: 70vh; }
+  .header-content h1 { font-size: 72px; line-height: 1.05; margin-bottom: 18px; padding: 0 12px; }
+  .header-content p { padding: 0 18px; font-size: 14px; }
+
+  /* Menu: mostrar label para menú tipo hamburguesa si lo tienes */
+  .menu label { display: block; }
+  .menu .navbar { position: absolute; top: 60px; left: 0; right: 0; display: none; background-color: rgba(0,0,0,0.9); z-index: 999; }
+  #menu:checked ~ .navbar { display: block; } /* funcionará si el HTML usa #menu checkbox */
+  .menu .navbar ul li { width: 100%; }
+  .menu .navbar ul li a { padding: 12px 18px; font-size: 16px; }
+
+  /* Somos */
+  .somos-content h2 { font-size: 34px; line-height: 40px; padding: 0 18px; }
+  .txt-p { padding: 0 18px; }
+
+  /* Services - apilar */
+  .services-group { flex-direction: column; gap: 18px; }
+  .services-1 { width: 100%; max-width: 420px; }
+
+  /* General (map más grande en móvil relativo al ancho) */
+  .general { flex-direction: column; }
+  .general-1 { width: 100%; padding: 30px 18px; }
+  .general-2, .general-3 { width: 100%; min-height: 300px; background-size: cover; background-position: center; margin-top: 12px; }
+
+  /* Blog */
+  .blog { padding: 40px 12px; }
+  .blog-1 { padding: 0; }
+  .blog-1 img { width: 100%; height: auto; max-width: none; border-radius: 12px; }
+
+  /* Footer */
+  .footer { padding: 40px 12px; }
+  .footer-content { flex-direction: column; text-align: center; }
+
+  /* Tipografía compacta */
+  h2 { font-size: 32px; }
+  p { font-size: 14px; }
+
+  /* Evita desbordes */
+  img, iframe, embed, object { max-width: 100%; height: auto; display: block; }
+}
+
+/* Muy grandes pantallas: ajustar tamaños */
+@media (min-width: 1600px) {
+  .container { max-width: 1400px; }
+  .header-content h1 { font-size: 260px; }
+  .somos-content h2 { font-size: 72px; }
+  .general-2, .general-3 { min-height: 600px; }
+  .services-1 { width: 260px; }
+}
